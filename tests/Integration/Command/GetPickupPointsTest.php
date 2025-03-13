@@ -1,0 +1,88 @@
+<?php
+
+declare(strict_types=1);
+
+namespace Answear\MwlBundle\Tests\Integration\Command;
+
+use Answear\MwlBundle\Client\Client;
+use Answear\MwlBundle\Client\RequestTransformer;
+use Answear\MwlBundle\Client\Serializer;
+use Answear\MwlBundle\Command\GetPickupPoints;
+use Answear\MwlBundle\ConfigProvider;
+use Answear\MwlBundle\Enum\DivisionTypeEnum;
+use Answear\MwlBundle\Enum\TagTypeEnum;
+use Answear\MwlBundle\Request\GetPickupPointsRequest;
+use Answear\MwlBundle\Response\GetPickupPointsResponse;
+use Answear\MwlBundle\Tests\MockGuzzleTrait;
+use GuzzleHttp\Psr7\Response;
+use PHPUnit\Framework\Attributes\Test;
+use PHPUnit\Framework\TestCase;
+
+class GetPickupPointsTest extends TestCase
+{
+    use MockGuzzleTrait;
+
+    private Client $client;
+
+    public function setUp(): void
+    {
+        parent::setUp();
+
+        $this->client = new Client(new ConfigProvider('test', 'Qwerty123!'), $this->setupGuzzleClient());
+    }
+
+    #[Test]
+    public function successfulGetPickupPoints(): void
+    {
+        $command = $this->getCommand();
+        $this->mockGuzzleResponse(new Response(200, [], $this->getSuccessfulBody()));
+
+        $response = $command->getPickupPoints(new GetPickupPointsRequest());
+
+        $this->assertCount(10, $response->getPickupPoints());
+        $this->assertPickupPoint($response);
+    }
+
+    private function assertPickupPoint(GetPickupPointsResponse $response): void
+    {
+        $point = $response->getPickupPoints()->getIterator()->current();
+
+        $this->assertSame($point->id, 23845950);
+        $this->assertSame($point->originId, '0x80c8000c2961d09111effdb578bba2a0');
+        $this->assertSame($point->pointCode, null);
+        $this->assertSame($point->pointType, 'MEEST');
+        $this->assertSame($point->pointName, null);
+        $this->assertSame($point->countryCode, 'UA');
+        $this->assertSame($point->city, 'Біла Церква');
+        $this->assertSame($point->cityIDRef, '0xb11200215aee3ebe11df749b44ac8365');
+        $this->assertSame($point->street, 'Михайла Сидорянського (Піщаний 1-й)');
+        $this->assertSame($point->buildingNumber, '7Б');
+        $this->assertSame($point->district, 'Білоцерківський');
+        $this->assertSame($point->region, 'КИЇВСЬКА');
+        $this->assertSame($point->openHours, 'Пн 09:00 - 20:00; Вт 09:00 - 20:00; Ср 09:00 - 20:00; Чт 09:00 - 20:00; Пт 09:00 - 20:00; Сб 09:00 - 20:00; Нд 10:00 - 19:00');
+        $this->assertSame($point->latitude, 49.7885);
+        $this->assertSame($point->longitude, 30.0908);
+        $this->assertSame($point->cod, true);
+        $this->assertSame($point->zipCode, '09100');
+        $this->assertSame($point->locationDescription, 'Відділення №82, м. Біла Церква, пров. Михайла Сидорянського (Піщаний 1-й), 7Б (Rozetka,на касі)');
+        $this->assertSame($point->divisionType, DivisionTypeEnum::StoreOrSmallWarehouse);
+        $this->assertSame($point->divisionCode, '21481');
+        $this->assertSame($point->cashPayType, false);
+        $this->assertSame($point->cardPayType, true);
+        $this->assertSame($point->maxWeight, 30.0);
+        $this->assertSame($point->name, null);
+        $this->assertSame($point->tag, TagTypeEnum::MeestPartner);
+    }
+
+    private function getCommand(): GetPickupPoints
+    {
+        $transformer = new RequestTransformer(new Serializer());
+
+        return new GetPickupPoints($this->client, $transformer);
+    }
+
+    private function getSuccessfulBody(): string
+    {
+        return file_get_contents(__DIR__ . '/data/example.getPickupPointsResponse.json');
+    }
+}

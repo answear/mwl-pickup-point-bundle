@@ -1,0 +1,53 @@
+{
+    "name": "answear/mwl-pickup-point-bundle",
+    "description": "API Client for MwlBundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "require": {
+        "php": "^8.2",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "^6.0|^7.0",
+        "symfony/http-kernel": "^6.0|^7.0",
+        "symfony/property-access": "^6.0|^7.0",
+        "symfony/serializer": "^6.0|^7.0",
+        "webmozart/assert": "^1.11"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.64",
+        "phpro/grumphp": "^2.8",
+        "phpstan/phpstan": "^2.0.2",
+        "phpstan/phpstan-webmozart-assert": "^2.0.0",
+        "phpunit/phpunit": "^10.5",
+        "roave/security-advisories": "dev-master",
+        "symfony/phpunit-bridge": "6.1.*|^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Answear\\MwlBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Answear\\MwlBundle\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "post-install-cmd": [
+            "GrumPHP\\Composer\\DevelopmentIntegrator::integrate"
+        ],
+        "post-update-cmd": [
+            "GrumPHP\\Composer\\DevelopmentIntegrator::integrate"
+        ]
+    },
+    "extra": {
+        "grumphp": {
+            "config-default-path": "grumphp.yaml"
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "phpro/grumphp": true
+        }
+    }
+}

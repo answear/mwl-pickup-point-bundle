@@ -1,0 +1,11 @@
+includes:
+    - vendor/phpstan/phpstan-webmozart-assert/extension.neon
+
+parameters:
+    level: 5
+    treatPhpDocTypesAsCertain: false
+    paths:
+        - %rootDir%/../../../src
+    ignoreErrors:
+        - message: '#.*NodeDefinition::children.*#'
+          path: ./src/DependencyInjection

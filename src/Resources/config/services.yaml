@@ -1,0 +1,11 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        public: false
+
+    Answear\MwlBundle\:
+        resource: '../../../src/{Command,Client}'
+
+    Answear\MwlBundle\ConfigProvider: ~
+
