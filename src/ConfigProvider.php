@@ -10,8 +10,8 @@ readonly class ConfigProvider
     public const SERVICE_URI = '/mwl';
 
     public function __construct(
-        public string $partnerKey,
-        public string $secretKey,
+        private string $partnerKey,
+        private string $secretKey,
     ) {
     }
 

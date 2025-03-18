@@ -13,6 +13,7 @@ use Answear\MwlBundle\Enum\DivisionTypeEnum;
 use Answear\MwlBundle\Enum\TagTypeEnum;
 use Answear\MwlBundle\Request\GetPickupPointsRequest;
 use Answear\MwlBundle\Response\GetPickupPointsResponse;
+use Answear\MwlBundle\Response\Struct\PickupPoint;
 use Answear\MwlBundle\Tests\MockGuzzleTrait;
 use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\Attributes\Test;
@@ -45,6 +46,7 @@ class GetPickupPointsTest extends TestCase
 
     private function assertPickupPoint(GetPickupPointsResponse $response): void
     {
+        /** @var PickupPoint $point */
         $point = $response->getPickupPoints()->getIterator()->current();
 
         $this->assertSame($point->id, 23845950);
@@ -52,19 +54,19 @@ class GetPickupPointsTest extends TestCase
         $this->assertSame($point->pointCode, null);
         $this->assertSame($point->pointType, 'MEEST');
         $this->assertSame($point->pointName, null);
-        $this->assertSame($point->countryCode, 'UA');
-        $this->assertSame($point->city, 'Біла Церква');
-        $this->assertSame($point->cityIDRef, '0xb11200215aee3ebe11df749b44ac8365');
-        $this->assertSame($point->street, 'Михайла Сидорянського (Піщаний 1-й)');
-        $this->assertSame($point->buildingNumber, '7Б');
-        $this->assertSame($point->district, 'Білоцерківський');
-        $this->assertSame($point->region, 'КИЇВСЬКА');
+        $this->assertSame($point->address->countryCode, 'UA');
+        $this->assertSame($point->address->city, 'Біла Церква');
+        $this->assertSame($point->address->cityIDRef, '0xb11200215aee3ebe11df749b44ac8365');
+        $this->assertSame($point->address->street, 'Михайла Сидорянського (Піщаний 1-й)');
+        $this->assertSame($point->address->buildingNumber, '7Б');
+        $this->assertSame($point->address->district, 'Білоцерківський');
+        $this->assertSame($point->address->region, 'КИЇВСЬКА');
+        $this->assertSame($point->address->zipCode, '09100');
+        $this->assertSame($point->address->locationDescription, 'Відділення №82, м. Біла Церква, пров. Михайла Сидорянського (Піщаний 1-й), 7Б (Rozetka,на касі)');
         $this->assertSame($point->openHours, 'Пн 09:00 - 20:00; Вт 09:00 - 20:00; Ср 09:00 - 20:00; Чт 09:00 - 20:00; Пт 09:00 - 20:00; Сб 09:00 - 20:00; Нд 10:00 - 19:00');
-        $this->assertSame($point->latitude, 49.7885);
-        $this->assertSame($point->longitude, 30.0908);
+        $this->assertSame($point->coordinates->latitude, 49.7885);
+        $this->assertSame($point->coordinates->longitude, 30.0908);
         $this->assertSame($point->cod, true);
-        $this->assertSame($point->zipCode, '09100');
-        $this->assertSame($point->locationDescription, 'Відділення №82, м. Біла Церква, пров. Михайла Сидорянського (Піщаний 1-й), 7Б (Rozetka,на касі)');
         $this->assertSame($point->divisionType, DivisionTypeEnum::StoreOrSmallWarehouse);
         $this->assertSame($point->divisionCode, '21481');
         $this->assertSame($point->cashPayType, false);

@@ -16,19 +16,10 @@ readonly class PickupPoint
         public ?string $pointCode,
         public string $pointType,
         public ?string $pointName,
-        public string $countryCode,
-        public string $city,
-        public string $cityIDRef,
-        public string $street,
-        public string $buildingNumber,
-        public ?string $district,
-        public ?string $region,
         public ?string $openHours,
-        public float $latitude,
-        public float $longitude,
+        public Address $address,
+        public Coordinates $coordinates,
         public bool $cod,
-        public string $zipCode,
-        public string $locationDescription,
         public ?DivisionTypeEnum $divisionType,
         public string $divisionCode,
         public bool $cashPayType,
@@ -46,21 +37,8 @@ readonly class PickupPoint
         Assert::nullOrStringNotEmpty($pointData['pointCode']);
         Assert::string($pointData['pointType']);
         Assert::nullOrStringNotEmpty($pointData['pointName']);
-        Assert::stringNotEmpty($pointData['countryCode']);
-        Assert::stringNotEmpty($pointData['city']);
-        Assert::stringNotEmpty($pointData['cityIDRef']);
-        Assert::stringNotEmpty($pointData['street']);
-        Assert::string($pointData['buildingNumber']);
-        Assert::nullOrStringNotEmpty($pointData['district']);
-        Assert::nullOrStringNotEmpty($pointData['region']);
         Assert::nullOrString($pointData['openHours']);
-        Assert::float($pointData['latitude']);
-        Assert::float($pointData['longitude']);
-        Assert::range($pointData['latitude'], -90, 90);
-        Assert::range($pointData['longitude'], -180, 180);
         Assert::boolean($pointData['cod']);
-        Assert::string($pointData['zipCode']);
-        Assert::string($pointData['locationDescription']);
         Assert::string($pointData['divisionType']);
         Assert::string($pointData['divisionCode']);
         Assert::boolean($pointData['cashPayType']);
@@ -75,19 +53,10 @@ readonly class PickupPoint
             $pointData['pointCode'],
             $pointData['pointType'],
             $pointData['pointName'],
-            $pointData['countryCode'],
-            $pointData['city'],
-            $pointData['cityIDRef'],
-            $pointData['street'],
-            $pointData['buildingNumber'],
-            $pointData['district'],
-            $pointData['region'],
             $pointData['openHours'],
-            $pointData['latitude'],
-            $pointData['longitude'],
+            Address::fromArray($pointData),
+            Coordinates::fromArray($pointData),
             $pointData['cod'],
-            $pointData['zipCode'],
-            $pointData['locationDescription'],
             DivisionTypeEnum::tryFrom($pointData['divisionType']),
             $pointData['divisionCode'],
             $pointData['cashPayType'],
