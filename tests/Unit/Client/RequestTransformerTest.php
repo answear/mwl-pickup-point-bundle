@@ -6,7 +6,6 @@ namespace Answear\MwlBundle\Tests\Unit\Client;
 
 use Answear\MwlBundle\Client\RequestTransformer;
 use Answear\MwlBundle\Client\Serializer;
-use Answear\MwlBundle\ConfigProvider;
 use Answear\MwlBundle\Request\GetPickupPointsRequest;
 use Answear\MwlBundle\Request\Request;
 use PHPUnit\Framework\Attributes\Test;
@@ -45,6 +44,6 @@ class RequestTransformerTest extends TestCase
 
     private function expectedPath(Request $request): string
     {
-        return ConfigProvider::SERVICE_URI . $request->getEndpoint();
+        return '/mwl' . $request->getEndpoint();
     }
 }

@@ -15,8 +15,6 @@ class ConfigProviderTest extends TestCase
     {
         $configuration = new ConfigProvider('test', 'Qwerty123!');
 
-        $this->assertSame('https://mwl.meest.com', ConfigProvider::URL);
-        $this->assertSame('/mwl', ConfigProvider::SERVICE_URI);
         $this->assertSame(
             [
                 'base_uri' => 'https://mwl.meest.com',

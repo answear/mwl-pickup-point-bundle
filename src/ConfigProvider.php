@@ -6,8 +6,7 @@ namespace Answear\MwlBundle;
 
 readonly class ConfigProvider
 {
-    public const URL = 'https://mwl.meest.com';
-    public const SERVICE_URI = '/mwl';
+    private const URL = 'https://mwl.meest.com';
 
     public function __construct(
         private string $partnerKey,
