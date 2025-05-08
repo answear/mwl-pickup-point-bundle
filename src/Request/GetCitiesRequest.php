@@ -4,10 +4,16 @@ declare(strict_types=1);
 
 namespace Answear\MwlBundle\Request;
 
-readonly class GetPickupPointsRequest extends Request
+readonly class GetCitiesRequest extends Request
 {
-    private const ENDPOINT = '/points/getPickupPoints';
+    private const ENDPOINT = '/cities';
     private const HTTP_METHOD = 'GET';
+    private const DEFAULT_COUNTRY = 'UA';
+
+    public function __construct(
+        public ?string $country = self::DEFAULT_COUNTRY,
+    ) {
+    }
 
     public function getEndpoint(): string
     {
@@ -21,6 +27,6 @@ readonly class GetPickupPointsRequest extends Request
 
     public function getQueryParams(): array
     {
-        return [];
+        return ['country' => $this->country];
     }
 }
