@@ -19,9 +19,16 @@ readonly class RequestTransformer
 
     public function transform(Request $request): HttpRequest
     {
+        $baseUri = new Uri(self::SERVICE_URI . $request->getEndpoint());
+
+        if (!empty($request->getQueryParams())) {
+            $queryString = http_build_query($request->getQueryParams());
+            $baseUri = $baseUri->withQuery($queryString);
+        }
+
         return new HttpRequest(
             $request->getMethod(),
-            new Uri(self::SERVICE_URI . $request->getEndpoint()),
+            $baseUri,
             [
                 'Content-type' => 'application/json',
             ],
