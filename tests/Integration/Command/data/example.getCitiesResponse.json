@@ -1,0 +1,382 @@
+[
+  {
+    "regionUA": "КІРОВОГРАДСЬКА",
+    "regionRU": "КИРОВОГРАДСКАЯ",
+    "regionEN": "KIROVOGRADS`KA",
+    "districtUA": "Кропивницький (Кіровоград)",
+    "districtRU": "Кропивницький",
+    "districtEN": "Kropyvnytskyi (Kirovograd)",
+    "cityUA": "Новогомельське",
+    "cityRU": "Новогомельское",
+    "cityEN": "Novogomelske",
+    "cityID": "6ed81960-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "27215"
+    ]
+  },
+  {
+    "regionUA": "СУМСЬКА",
+    "regionRU": "СУМСКАЯ",
+    "regionEN": "SUMS`KA",
+    "districtUA": "Конотопський",
+    "districtRU": "Конотопский",
+    "districtEN": "Konotopskyi",
+    "cityUA": "Воронівка",
+    "cityRU": "Вороновка",
+    "cityEN": "Voronivka",
+    "cityID": "4aba3f21-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "41840"
+    ]
+  },
+  {
+    "regionUA": "ТЕРНОПІЛЬСЬКА",
+    "regionRU": "ТЕРНОПОЛЬСКАЯ",
+    "regionEN": "TERNOPIL`S`KA",
+    "districtUA": "Чортківський",
+    "districtRU": "Чертковский",
+    "districtEN": "Chortkivskyi",
+    "cityUA": "Якубівка",
+    "cityRU": "Якубовка",
+    "cityEN": "Yakubivka",
+    "cityID": "8d17efe1-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "48642"
+    ]
+  },
+  {
+    "regionUA": "ХАРКІВСЬКА",
+    "regionRU": "ХАРЬКОВСКАЯ",
+    "regionEN": "KHARKIVS`KA",
+    "districtUA": "Ізюмський",
+    "districtRU": "Изюмский",
+    "districtEN": "Iziumskyi",
+    "cityUA": "Курулька",
+    "cityRU": "Курулька",
+    "cityEN": "Kurulka",
+    "cityID": "62c3cff0-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "64757",
+      "64762"
+    ]
+  },
+  {
+    "regionUA": "ЖИТОМИРСЬКА",
+    "regionRU": "ЖИТОМИРСКАЯ",
+    "regionEN": "ZHITOMIRS`KA",
+    "districtUA": "Коростенський",
+    "districtRU": "Коростенский",
+    "districtEN": "Korostenskyi",
+    "cityUA": "Городець",
+    "cityRU": "Городец",
+    "cityEN": "Gorodets",
+    "cityID": "50c59000-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "11125"
+    ]
+  },
+  {
+    "regionUA": "ЧЕРНІГІВСЬКА",
+    "regionRU": "ЧЕРНИГОВСКАЯ",
+    "regionEN": "CHERNIGIVS`KA",
+    "districtUA": "Ніжинський",
+    "districtRU": "Нежинский",
+    "districtEN": "Nizhynskyi",
+    "cityUA": "Кобилещина",
+    "cityRU": "Кобылещина",
+    "cityEN": "Kobyleshchyna",
+    "cityID": "5cb617f8-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "17130"
+    ]
+  },
+  {
+    "regionUA": "ЧЕРНІВЕЦЬКА",
+    "regionRU": "ЧЕРНОВИЦКАЯ",
+    "regionEN": "CHERNIVETS`KA",
+    "districtUA": "Вижницький",
+    "districtRU": "Вижницкий",
+    "districtEN": "Vyzhnytskyi",
+    "cityUA": "Діброва",
+    "cityRU": "Диброва",
+    "cityEN": "Dibrova",
+    "cityID": "50c5947d-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "59349",
+      "59350"
+    ]
+  },
+  {
+    "regionUA": "ХМЕЛЬНИЦЬКА",
+    "regionRU": "ХМЕЛЬНИЦКАЯ",
+    "regionEN": "KHMEL`NITS`KA",
+    "districtUA": "Хмельницький",
+    "districtRU": "Хмельницкий",
+    "districtEN": "Khmelnytskyi",
+    "cityUA": "Савинці",
+    "cityRU": "Савинцы",
+    "cityEN": "Savyntsi",
+    "cityID": "7ad953a0-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "32156"
+    ]
+  },
+  {
+    "regionUA": "ОДЕСЬКА",
+    "regionRU": "ОДЕССКАЯ",
+    "regionEN": "ODES`KA",
+    "districtUA": "Подільський (Котовський)",
+    "districtRU": "Подольский (Котовский)",
+    "districtEN": "Podilskyi (Kotovskyi)",
+    "cityUA": "Зеленогірське",
+    "cityRU": "Зеленогорское",
+    "cityEN": "Zelenogirske",
+    "cityID": "56bdd6ae-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "66513",
+      "66514"
+    ]
+  },
+  {
+    "regionUA": "ВІННИЦЬКА",
+    "regionRU": "ВИННИЦКАЯ",
+    "regionEN": "VINNITS`KA",
+    "districtUA": "Вінницький",
+    "districtRU": "Винницкий",
+    "districtEN": "Vinnytskyi",
+    "cityUA": "Федорівка",
+    "cityRU": "Федоровка",
+    "cityEN": "Fedorivka",
+    "cityID": "871622dc-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "23333",
+      "23338"
+    ]
+  },
+  {
+    "regionUA": "МИКОЛАЇВСЬКА",
+    "regionRU": "НИКОЛАЕВСКАЯ",
+    "regionEN": "MIKOLAIVS`KA",
+    "districtUA": "Баштанський",
+    "districtRU": "Баштанский",
+    "districtEN": "Bashtanskyi",
+    "cityUA": "Станційне",
+    "cityRU": "Станционное",
+    "cityEN": "Stantsiine",
+    "cityID": "60030397-108c-11e8-80ce-1c98ec135261",
+    "postCodes": [
+      "55609",
+      "55611"
+    ]
+  },
+  {
+    "regionUA": "ЧЕРНІВЕЦЬКА",
+    "regionRU": "ЧЕРНОВИЦКАЯ",
+    "regionEN": "CHERNIVETS`KA",
+    "districtUA": "Чернівецький",
+    "districtRU": "Черновецкий",
+    "districtEN": "Chernivetskyi",
+    "cityUA": "Степанівка",
+    "cityRU": "Степановка",
+    "cityEN": "Stepanivka",
+    "cityID": "80f558ca-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "59437"
+    ]
+  },
+  {
+    "regionUA": "ЖИТОМИРСЬКА",
+    "regionRU": "ЖИТОМИРСКАЯ",
+    "regionEN": "ZHITOMIRS`KA",
+    "districtUA": "Коростенський",
+    "districtRU": "Коростенский",
+    "districtEN": "Korostenskyi",
+    "cityUA": "Краснопіль",
+    "cityRU": "Краснополь",
+    "cityEN": "Krasnopil",
+    "cityID": "62c3cd1c-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "11554"
+    ]
+  },
+  {
+    "regionUA": "ЗАПОРІЗЬКА",
+    "regionRU": "ЗАПОРОЖСКАЯ",
+    "regionEN": "ZAPORIZS`KA",
+    "districtUA": "Василівський",
+    "districtRU": "Васильевский",
+    "districtEN": "Vasylivskyi",
+    "cityUA": "Тернувате",
+    "cityRU": "Терноватое",
+    "cityEN": "Ternuvate",
+    "cityID": "80f55c6e-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "70150"
+    ]
+  },
+  {
+    "regionUA": "ІВАНО-ФРАНКІВСЬКА",
+    "regionRU": "ИВАНО-ФРАНКОВСКАЯ",
+    "regionEN": "IVANO-FRANKIVS`KA",
+    "districtUA": "Івано-Франківський",
+    "districtRU": "Ивано-Франковский",
+    "districtEN": "Ivano-Frankivskyi",
+    "cityUA": "Мединя",
+    "cityRU": "Медыня",
+    "cityEN": "Medynia",
+    "cityID": "68cf26ef-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "77163"
+    ]
+  },
+  {
+    "regionUA": "КІРОВОГРАДСЬКА",
+    "regionRU": "КИРОВОГРАДСКАЯ",
+    "regionEN": "KIROVOGRADS`KA",
+    "districtUA": "Кропивницький (Кіровоград)",
+    "districtRU": "Кропивницький",
+    "districtEN": "Kropyvnytskyi (Kirovograd)",
+    "cityUA": "Живанівка",
+    "cityRU": "Живановка",
+    "cityEN": "Zhyvanivka",
+    "cityID": "56bdd1de-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "28406"
+    ]
+  },
+  {
+    "regionUA": "ЖИТОМИРСЬКА",
+    "regionRU": "ЖИТОМИРСКАЯ",
+    "regionEN": "ZHITOMIRS`KA",
+    "districtUA": "Новоград-Волинський",
+    "districtRU": "Новоград-Волынский",
+    "districtEN": "Novograd-Volynskyi",
+    "cityUA": "Глибочок",
+    "cityRU": "Глубочок",
+    "cityEN": "Glybochok",
+    "cityID": "50c58e69-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "12745"
+    ]
+  },
+  {
+    "regionUA": "ХМЕЛЬНИЦЬКА",
+    "regionRU": "ХМЕЛЬНИЦКАЯ",
+    "regionEN": "KHMEL`NITS`KA",
+    "districtUA": "Хмельницький",
+    "districtRU": "Хмельницкий",
+    "districtEN": "Khmelnytskyi",
+    "cityUA": "Війтівці",
+    "cityRU": "Войтовцы",
+    "cityEN": "Viitivtsi",
+    "cityID": "4aba3c5a-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "31256"
+    ]
+  },
+  {
+    "regionUA": "ЛЬВІВСЬКА",
+    "regionRU": "ЛЬВОВСКАЯ",
+    "regionEN": "LVIVS`KA",
+    "districtUA": "Золочівський",
+    "districtRU": "Золочевский",
+    "districtEN": "Zolochivskyi",
+    "cityUA": "Ракобовти",
+    "cityRU": "Ракобовты",
+    "cityEN": "Rakobovty",
+    "cityID": "7ad94fdf-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "80515"
+    ]
+  },
+  {
+    "regionUA": "ЖИТОМИРСЬКА",
+    "regionRU": "ЖИТОМИРСКАЯ",
+    "regionEN": "ZHITOMIRS`KA",
+    "districtUA": "Новоград-Волинський",
+    "districtRU": "Новоград-Волынский",
+    "districtEN": "Novograd-Volynskyi",
+    "cityUA": "Перелісок",
+    "cityRU": "Перелесок",
+    "cityEN": "Perelisok",
+    "cityID": "74dc4843-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "11714"
+    ]
+  },
+  {
+    "regionUA": "КІРОВОГРАДСЬКА",
+    "regionRU": "КИРОВОГРАДСКАЯ",
+    "regionEN": "KIROVOGRADS`KA",
+    "districtUA": "Новоукраїнський",
+    "districtRU": "Новоукраинский",
+    "districtEN": "Novoukrainskyi",
+    "cityUA": "Новопавлівка",
+    "cityRU": "Новопавловка",
+    "cityEN": "Novopavlivka",
+    "cityID": "6ed81af4-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "26228"
+    ]
+  },
+  {
+    "regionUA": "ВОЛИНСЬКА",
+    "regionRU": "ВОЛЫНСКАЯ",
+    "regionEN": "VOLYNS`KA",
+    "districtUA": "Володимир-Волинський",
+    "districtRU": "Владимир-Волынский",
+    "districtEN": "Volodymyr-Volynskyi",
+    "cityUA": "Роговичі",
+    "cityRU": "Роговичи",
+    "cityEN": "Rogovychi",
+    "cityID": "7ad95137-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "45532"
+    ]
+  },
+  {
+    "regionUA": "СУМСЬКА",
+    "regionRU": "СУМСКАЯ",
+    "regionEN": "SUMS`KA",
+    "districtUA": "Сумський",
+    "districtRU": "Сумской",
+    "districtEN": "Sumskyi",
+    "cityUA": "Катеринівка",
+    "cityRU": "Катериновка",
+    "cityEN": "Katerynivka",
+    "cityID": "5cb615ce-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "41443"
+    ]
+  },
+  {
+    "regionUA": "ВІННИЦЬКА",
+    "regionRU": "ВИННИЦКАЯ",
+    "regionEN": "VINNITS`KA",
+    "districtUA": "Тульчинський",
+    "districtRU": "Тульчинский",
+    "districtEN": "Tulchynskyi",
+    "cityUA": "Іллівка",
+    "cityRU": "Ильевка",
+    "cityEN": "Illivka",
+    "cityID": "56bdd8d8-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "24642"
+    ]
+  },
+  {
+    "regionUA": "ВІННИЦЬКА",
+    "regionRU": "ВИННИЦКАЯ",
+    "regionEN": "VINNITS`KA",
+    "districtUA": "Могилів-Подільський",
+    "districtRU": "Могилев-Подольский",
+    "districtEN": "Mogyliv-Podilskyi",
+    "cityUA": "Обухів",
+    "cityRU": "Обухов",
+    "cityEN": "Obukhiv",
+    "cityID": "6ed81cfd-749b-11df-b112-00215aee3ebe",
+    "postCodes": [
+      "23441"
+    ]
+  }
+]
