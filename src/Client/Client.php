@@ -6,10 +6,11 @@ namespace Answear\MwlBundle\Client;
 
 use Answear\MwlBundle\ConfigProvider;
 use Answear\MwlBundle\Exception\ServiceUnavailableException;
+use Answear\MwlBundle\Request\Request;
+use Answear\MwlBundle\Request\Transformer\RequestTransformer;
 use GuzzleHttp\Client as GuzzleClient;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
-use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\ResponseInterface;
 
 class Client
@@ -28,8 +29,19 @@ class Client
 
     public function request(Request $request): ResponseInterface
     {
+        $psrRequest = RequestTransformer::transform($request);
+        $options = [];
+
+        if (!empty($request->getQueryParams())) {
+            $options['query'] = $request->getQueryParams();
+        }
+
+        if (!empty($request->getBody())) {
+            $options['json'] = $request->getBody();
+        }
+
         try {
-            $response = $this->client->send($request);
+            $response = $this->client->send($psrRequest, $options);
 
             if ($response->getBody()->isSeekable()) {
                 $response->getBody()->rewind();

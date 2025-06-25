@@ -5,8 +5,6 @@ declare(strict_types=1);
 namespace Answear\MwlBundle\Tests\Integration\Command;
 
 use Answear\MwlBundle\Client\Client;
-use Answear\MwlBundle\Client\RequestTransformer;
-use Answear\MwlBundle\Client\Serializer;
 use Answear\MwlBundle\Command\GetCities;
 use Answear\MwlBundle\ConfigProvider;
 use Answear\MwlBundle\Request\GetCitiesRequest;
@@ -81,9 +79,7 @@ class GetCitiesTest extends TestCase
 
     private function getCommand(): GetCities
     {
-        $transformer = new RequestTransformer(new Serializer());
-
-        return new GetCities($this->client, $transformer);
+        return new GetCities($this->client);
     }
 
     private function getSuccessfulBody(): string

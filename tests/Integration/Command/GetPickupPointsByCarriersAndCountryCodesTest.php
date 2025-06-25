@@ -5,11 +5,14 @@ declare(strict_types=1);
 namespace Answear\MwlBundle\Tests\Integration\Command;
 
 use Answear\MwlBundle\Client\Client;
-use Answear\MwlBundle\Command\GetPickupPoints;
+use Answear\MwlBundle\Command\GetPickupPointsByCarriersAndCountryCodes;
 use Answear\MwlBundle\ConfigProvider;
+use Answear\MwlBundle\Enum\CarrierEnum;
+use Answear\MwlBundle\Enum\CountryCodeEnum;
 use Answear\MwlBundle\Enum\DivisionTypeEnum;
 use Answear\MwlBundle\Enum\TagTypeEnum;
-use Answear\MwlBundle\Request\GetPickupPointsRequest;
+use Answear\MwlBundle\Request\GetPickupPointsByCarriersAndCountryCodesRequest;
+use Answear\MwlBundle\Request\Struct\CarrierAndCountryCode;
 use Answear\MwlBundle\Response\GetPickupPointsResponse;
 use Answear\MwlBundle\Response\Struct\PickupPoint;
 use Answear\MwlBundle\Tests\MockGuzzleTrait;
@@ -17,7 +20,7 @@ use GuzzleHttp\Psr7\Response;
 use PHPUnit\Framework\Attributes\Test;
 use PHPUnit\Framework\TestCase;
 
-class GetPickupPointsTest extends TestCase
+class GetPickupPointsByCarriersAndCountryCodesTest extends TestCase
 {
     use MockGuzzleTrait;
 
@@ -31,12 +34,21 @@ class GetPickupPointsTest extends TestCase
     }
 
     #[Test]
-    public function successfulGetPickupPoints(): void
+    public function successfulGetPickupPointsByCarriersAndCountryCodes(): void
     {
         $command = $this->getCommand();
         $this->mockGuzzleResponse(new Response(200, [], $this->getSuccessfulBody()));
 
-        $response = $command->getPickupPoints(new GetPickupPointsRequest());
+        $response = $command->getPickupPointsByCarriersAndCountryCodesRequest(
+            new GetPickupPointsByCarriersAndCountryCodesRequest(
+                [
+                    new CarrierAndCountryCode(
+                        CarrierEnum::Meest,
+                        CountryCodeEnum::Ukraine
+                    )
+                ]
+            )
+        );
 
         $this->assertCount(10, $response->getPickupPoints());
         $this->assertPickupPoint($response);
@@ -74,9 +86,9 @@ class GetPickupPointsTest extends TestCase
         $this->assertSame($point->tag, TagTypeEnum::MeestPartner);
     }
 
-    private function getCommand(): GetPickupPoints
+    private function getCommand(): GetPickupPointsByCarriersAndCountryCodes
     {
-        return new GetPickupPoints($this->client);
+        return new GetPickupPointsByCarriersAndCountryCodes($this->client);
     }
 
     private function getSuccessfulBody(): string
