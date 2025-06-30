@@ -18,9 +18,4 @@ readonly class GetPickupPointsRequest extends Request
     {
         return self::HTTP_METHOD;
     }
-
-    public function getQueryParams(): array
-    {
-        return [];
-    }
 }

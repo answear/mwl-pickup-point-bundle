@@ -4,11 +4,16 @@ declare(strict_types=1);
 
 namespace Answear\MwlBundle\Command;
 
+use Answear\MwlBundle\Client\Client;
 use Psr\Http\Message\ResponseInterface;
 use Webmozart\Assert\Assert;
 
 abstract readonly class AbstractCommand
 {
+    public function __construct(protected Client $client)
+    {
+    }
+
     protected function getBody(ResponseInterface $response): array
     {
         $body = $response->getBody()->getContents();
