@@ -10,10 +10,6 @@ use Answear\MwlBundle\Response\GetCitiesResponse;
 
 readonly class GetCities extends AbstractCommand
 {
-    public function __construct(private Client $client)
-    {
-    }
-
     public function getCities(GetCitiesRequest $request): GetCitiesResponse
     {
         $response = $this->client->request($request);
