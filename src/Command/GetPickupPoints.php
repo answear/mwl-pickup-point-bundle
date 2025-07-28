@@ -11,7 +11,7 @@ readonly class GetPickupPoints extends AbstractCommand
 {
     public function getPickupPoints(GetPickupPointsRequest $request): GetPickupPointsResponse
     {
-        $response = $this->client->request($request);
+        $response = $this->getResponse($request);
 
         return GetPickupPointsResponse::fromArray(
             $this->getBody($response),
