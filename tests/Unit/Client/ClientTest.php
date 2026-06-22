@@ -42,7 +42,6 @@ class ClientTest extends TestCase
             ->with($psrRequest, [])
             ->willReturn($this->response);
 
-
         $client = new Client(
             $this->createMock(ConfigProvider::class),
             $clientInterface
@@ -69,8 +68,8 @@ class ClientTest extends TestCase
                 $psrRequest,
                 [
                     'query' => [
-                        'countryCode' => 'UA'
-                    ]
+                        'countryCode' => 'UA',
+                    ],
                 ]
             )
             ->willReturn($this->response);
@@ -101,8 +100,8 @@ class ClientTest extends TestCase
                 $psrRequest,
                 [
                     'json' => [
-                        'countryCode' => 'UA'
-                    ]
+                        'countryCode' => 'UA',
+                    ],
                 ]
             )
             ->willReturn($this->response);
@@ -134,11 +133,11 @@ class ClientTest extends TestCase
                 $psrRequest,
                 [
                     'query' => [
-                        'countryCode' => 'UA'
+                        'countryCode' => 'UA',
                     ],
                     'json' => [
-                        'countryCode' => 'UA'
-                    ]
+                        'countryCode' => 'UA',
+                    ],
                 ]
             )
             ->willReturn($this->response);

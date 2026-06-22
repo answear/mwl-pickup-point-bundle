@@ -45,7 +45,7 @@ class GetPickupPointsByCarriersAndCountryCodesTest extends TestCase
                     new CarrierAndCountryCode(
                         CarrierEnum::Meest,
                         CountryCodeEnum::Ukraine
-                    )
+                    ),
                 ]
             )
         );
