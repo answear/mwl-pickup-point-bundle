@@ -10,11 +10,13 @@ abstract readonly class Request
 
     abstract public function getMethod(): string;
 
-    public function getQueryParams(): array {
+    public function getQueryParams(): array
+    {
         return [];
     }
 
-    public function getBody(): array {
+    public function getBody(): array
+    {
         return [];
     }
 }
